@@ -16,37 +16,6 @@ resource "aws_lb_listener" "http" {
   }
 }
 
-resource "aws_lb_listener_rule" "image" {
-  listener_arn = aws_lb_listener.http.arn
-  priority     = 10
-
-  action {
-    type             = "forward"
-    target_group_arn = var.tg_arns[0]  # Assume tg_a
-  }
-
-  condition {
-    path_pattern {
-      values = ["/images/*"]
-    }
-  }
-}
-
-resource "aws_lb_listener_rule" "register" {
-  listener_arn = aws_lb_listener.http.arn
-  priority     = 20
-
-  action {
-    type             = "forward"
-    target_group_arn = var.tg_arns[1]  # Assume tg_b
-  }
-
-  condition {
-    path_pattern {
-      values = ["/register"]
-    }
-  }
-}
 
 
 output "alb_dns_name" {
