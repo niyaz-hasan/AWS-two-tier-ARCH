@@ -17,7 +17,7 @@ module "alb" {
 
 module "target_group" {
   source      = "./modules/target_group"
-  name        = "target_group"
+  name        = "target-group"
   port        = 80
   vpc_id      = module.vpc.vpc_id
   path        = "/"
