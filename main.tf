@@ -74,5 +74,4 @@ module "rds" {
   db_username          = "admin"
   db_password          = "yourpassword123"
   sg_id                = module.sg_group.rds_security_group_id
-  vpc_id               = module.vpc.vpc_id
 }
