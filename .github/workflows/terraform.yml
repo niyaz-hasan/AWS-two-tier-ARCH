@@ -50,12 +50,12 @@ jobs:
           tflint --recursive
 
       - name: Install Checkov
-        continue-on-error: true
         run: |
           python3 -m pip install --upgrade pip
           pip install checkov
 
       - name: Run Checkov
+        continue-on-error: true
         run: |
           checkov -d .
 
