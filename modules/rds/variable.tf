@@ -1,5 +1,5 @@
 variable "private_subnets" {
-  type = string
+  type = list(string)
 }
 
 variable "name" {
@@ -17,3 +17,4 @@ variable "db_username" {
 variable "db_password" {
   type = string
 }
+

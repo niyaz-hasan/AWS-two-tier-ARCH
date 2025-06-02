@@ -70,8 +70,9 @@ module "instances_b" {
 
 module "rds" {
   source               = "./modules/rds"
+  name                 = var.name
   private_subnets      = module.vpc.private_subnets
   db_username          = "admin"
-  db_password          = "yourpassword123"
-  sg_id                = module.sg_group.rds_security_group_id
+  db_password          = "y7Yfyr8oHIUvkDs4"
+  rds_security_group_ids  = [module.sg_group.rds_security_group_id]
 }
