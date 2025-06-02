@@ -73,6 +73,6 @@ module "rds" {
   name                 = var.name
   private_subnets      = module.vpc.private_subnets
   db_username          = var.db_username
-  db_password          = var.password
+  db_password          = var.db_password
   rds_security_group_ids  = [module.sg_group.rds_security_group_id]
 }

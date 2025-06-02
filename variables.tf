@@ -22,10 +22,8 @@ variable "db_username" {
   default     = "admin"
 }
 
-
-
 variable "db_password" {
-  description = "Name of the region"
+  description = "Name of the password"
   type        = string
   default     = "y7Yfyr8oHIUvkDs4"
 }
