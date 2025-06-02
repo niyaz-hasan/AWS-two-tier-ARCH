@@ -23,7 +23,7 @@ No requirements.
 
 
 
-## Outputs ##
+## Outputs ###
 
 | Name | Description |
 |------|-------------|
