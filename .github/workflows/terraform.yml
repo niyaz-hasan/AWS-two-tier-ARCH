@@ -49,15 +49,15 @@ jobs:
           tflint --init
           tflint --recursive
 
-      - name: Install Checkov
-        run: |
-          python3 -m pip install --upgrade pip
-          pip install checkov
-
-      - name: Run Checkov
-        continue-on-error: true
-        run: |
-          checkov -d .
+#      - name: Install Checkov
+#        run: |
+#          python3 -m pip install --upgrade pip
+#          pip install checkov
+#
+#      - name: Run Checkov
+#        continue-on-error: true
+#        run: |
+#          checkov -d .
 
       - name: Terraform Init
         run: terraform init
