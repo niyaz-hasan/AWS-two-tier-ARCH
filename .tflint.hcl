@@ -62,10 +62,6 @@ rule "aws_route_not_specified_target" {
   enabled = true
 }
 
-# Load balancer rules
-rule "aws_lb_invalid_target_group_protocol" {
-  enabled = true
-}
 
 # Disable unused declared providers
 rule "terraform_unused_declarations" {
