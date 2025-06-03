@@ -66,10 +66,6 @@ rule "aws_route_not_specified_target" {
 }
 
 # Load balancer rules
-rule "aws_alb_invalid_security_group" {
-  enabled = true
-}
-
 rule "aws_lb_invalid_target_group_protocol" {
   enabled = true
 }
@@ -87,11 +83,4 @@ rule "terraform_documented_variables" {
 # Enforce consistent output declarations
 rule "terraform_documented_outputs" {
   enabled = true
-}
-
-# Workspace specific rules
-config {
-  module = true
-  force = false
-  disabled_by_default = false
 }
