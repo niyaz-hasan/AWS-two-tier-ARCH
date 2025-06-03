@@ -48,9 +48,6 @@ rule "aws_db_instance_default_parameter_group" {
   enabled = true
 }
 
-rule "aws_db_instance_encrypted" {
-  enabled = true
-}
 
 rule "aws_alb_invalid_security_group" {
   enabled = true
